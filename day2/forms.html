@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h3>Sign Up</h3>
+    <form action="./action.html">
+      <table border="1px">
+        <tr>
+          <td><label for="First Name">First Name:</label></td>
+          <td>
+            <input type="text" placeholder="Enter your First Name" required />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Last Name">Last Name:</label></td>
+          <td><input type="text" placeholder="Enter your last Name" required /></td>
+        </tr>
+        <tr>
+          <td><label for="Email">Email:</label></td>
+          <td><input
+            type="email"
+            placeholder="Enter your emailID"
+            value="@sjit.ac.in"
+            required
+          /></td>
+        </tr>
+        <tr>
+          <label for="password">Password:</label>
+          <input type="password" placeholder="Enter your password" required />
+        </tr>
+        <tr>
+        <label for="cnfpassword">Confirm Password:</label>
+        <input type="password" placeholder="Confirm password" required />
+        </tr>
+        <tr>
+        <label for="DOB">Date of Birth:</label>
+        <input type="date" placeholder="Enter DOB" required />
+        </tr>
+        <tr>
+        <label for="MobileNo">Mobile Number:</label>
+        <input type="tel" placeholder="Enter Mobile number" required />
+        </tr>
+        <tr>
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" />male
+        <input type="radio" name="gender" />female
+        <input type="radio" name="gender" />others
+        </tr>
+        <button type="submit">Sign up</button>
+      </table>
+    </form>
+    <p>Already having an account?<a href="action.html">Login</a></p>
+    <hr />
+    <a href="./index.html"> To go to previous page</a>
+  </body>
+</html>
