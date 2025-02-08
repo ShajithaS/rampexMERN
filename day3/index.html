@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTMl with styling</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>Working with CSS</h1>
+    <h4>Inline Styling</h4>
+    <p style="color: aqua; background-color: black">This is Inline Styling</p>
+    <h4 id="idselector">Internal Styling</h4>
+    <p>
+      Inline styling has priority over internal Styling, I have given height =
+      400px in internal and height = 300px in inline, here 300px is applied
+    </p>
+    <style>
+      .internal {
+        height: 400px;
+        width: 400px;
+        background-color: aqua;
+      }
+    </style>
+    <div
+      class="external internal"
+      style="height: 300px; background-color: rgb(201, 158, 240)"
+    >
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, hic
+        vitae unde odit et aspernatur delectus reprehenderit excepturi
+        reiciendis error laboriosam voluptatem exercitationem autem quam,
+        sapiente eaque quisquam iusto aliquam natus quidem iste deleniti non
+        maiores! Molestiae voluptas magni ut velit officiis totam architecto,
+        dolores non vero illo officia dicta in ratione tempora. Sed, voluptatem.
+        Beatae facilis, dolores iure quia quam dolorum tempora cupiditate,
+        veritatis qui perferendis minima, alias est dignissimos animi voluptatem
+        recusandae libero. Itaque molestiae nostrum, incidunt illum est maiores
+        corporis libero unde. Labore atque ut, nulla possimus ex ullam
+        dignissimos vel dolorum ea laborum laboriosam at, delectus, aliquam
+        iusto nobis. A perferendis nam fugit, magnam quidem distinctio mollitia
+        debitis iure. Est non delectus rem harum aspernatur deserunt dolor sunt
+        ipsum provident tempore nobis, quae ratione tempora nostrum
+        exercitationem illum hic. Sapiente corrupti eum recusandae quia fugit
+        dolorum, laudantium ullam ipsum ex amet aspernatur incidunt quaerat eos
+        accusantium?
+      </p>
+    </div>
+    <h3>Priorities of Styling</h3>
+    <ul>
+      <li>Comparing inline and internal</li>
+      <ol>
+        <li>inline</li>
+        <li>internal</li>
+      </ol>
+      <li>Comparing inline and external</li>
+      <ol>
+        <li>inline</li>
+        <li>external</li>
+      </ol>
+      <li>
+        Comparing internal and external
+        <ul>
+          <li>link tag comes first then style tag</li>
+          <ol>
+            <li>inline</li>
+            <li>internal</li>
+            <li>external</li>
+          </ol>
+
+          <li>style tag comes first then link tag</li>
+          <ol>
+            <li>inline</li>
+            <li>external</li>
+            <li>internal</li>
+          </ol>
+        </ul>
+      </li>
+    </ul>
+    <!--put ending tag of div here to avoid overlapping since height of div is only 300 pixels-->
+    <hr />
+    <a href="intermediate.html">Go to next page to learn more about css</a>
+  </body>
+</html>
