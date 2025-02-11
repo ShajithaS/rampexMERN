@@ -7,6 +7,116 @@
 </head>
 <body>
     <h1>Your have succesfully logged in </h1>
+    <h2>Here is the List of git commands</h2>
+    <ol>
+        <li>git -v</li>
+        <ul>
+            <li>
+                Displays the installed Git version.
+            </li>
+            <li>Helps verify whether Git is installed on your system.
+</li>
+        </ul>
+        <li>
+            git init
+        </li>
+        <ul>
+            <li>Initializes a new Git repository in the current directory.</li>
+            <li>Creates a .git folder, which stores all version control data.</li>
+            <li>Converts an existing project into a Git-tracked repository.</li>
+        </ul>
+        <li>git status</li>
+        <ul>
+            <li>Shows untracked, staged, and modified files.</li>
+            <li>Helps track file changes before committing.</li>
+        </ul>
+        <li>git add</li>
+        <ul>
+            <li>Moves files from the working directory to the staging area.</li>
+            <li>git add . stages all modified files.</li>
+            <li>Prepares files for the next commit.</li>
+        </ul>
+        <li>git config</li>
+        <ul>
+            <li>git config --global user.name "Your Name"</li>
+            <li>git config --global user.email "your.email@example.com"</li>
+            <li>Configures Git username and email (required for commits).</li>
+            <li>--global applies the settings system-wide.</li>
+            <li>--local applies settings only for the current repository.</li>
+        </ul>
+        <li>
+            git remote add origin
+        </li>
+        <ul>
+            <li>
+                git remote add origin https://github.com/user/repo.git
+            </li>
+            <li>
+                Links the local Git repository to a remote repository.
+            </li>
+            <li>
+                origin is the default name for the remote.
+            </li>
+            <li>
+                Allows pushing/pulling code from GitHub or other Git servers.
+            </li>
+        </ul>
+        <li>git push</li>
+        <ul>
+            <li>git push origin main (or) git push -u origin main</li>
+            <li>Pushes committed changes to the remote repository.</li>
+            <li>-u sets the upstream branch for future git push commands.</li>
+            <li>Requires authentication (if pushing to a private repo).</li>
+        </ul>
+        <li>git branch (Manage Branches)</li>
+        <ul>
+            <li>git branch (or) git branch <branch-name></branch-name></li>
+            <li>Lists all existing branches in the repository.</li>
+            <li>Creates a new branch (git branch feature-xyz).</li>
+            <li>The main branch is usually named main or master.</li>
+        </ul>
+        <li>
+            git checkout (Switch Branches)
+        </li>
+        <ul>
+            <li>git checkout <branch-name> (or) git checkout -b <new-branch> </li>
+            <li>Switches to another branch.</li>
+            <li>-b creates and switches to a new branch in one step.</li>
+        </ul>
+        <li>git log</li>
+        <ul>
+            <li>View Commit History</li>
+            <li>Shows a list of past commits with details like:Commit ID,Author,Date,Commit message</li>
+        </ul>
+        <li>git pull</li>
+        <ul>
+            <li>
+                git pull origin main
+            </li>
+            <li>
+                Fetches the latest changes from the remote repository.
+            </li>
+            <li>
+                Merges remote updates into the local branch.
+            </li>
+            <li>
+                Avoids conflicts when multiple people work on the same project.
+            </li>
+        </ul>
+        <li>
+            git stash
+        </li>
+        <ul>
+            <li>Temporarily saves uncommitted changes and resets the working directory.</li>
+            <li>Useful when switching branches without committing changes.</li>
+        </ul>
+        <li>git stash apply</li>
+        <ul>
+            <li>Restores the last stashed changes without deleting them.</li>
+            <li>If multiple stashes exist, use git stash list and apply a specific stash: example - git stash apply stash@{1}
+            </li>
+        </ul>
+    </ol>
     <a href="forms.html">Go to previous page</a>
 </body>
 </html>
