@@ -1,0 +1,24 @@
+/*Styling for particular field*/
+input[type="number"]{
+    border:2px solid blueviolet;
+}
+
+/*Styling for all fields*/
+input{
+    border-radius:10px;
+    margin: 10px;
+    padding:10px;
+}
+button{
+    background-color: white;
+    border-radius: 10px;
+    font-size:16px;
+    margin:10px;
+    color: black;
+    padding: 10px;
+    width:215px;
+}
+.button:hover{
+    color:white;
+    background-color: blueviolet;
+}
