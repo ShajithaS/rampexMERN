@@ -22,5 +22,25 @@ header{
     background-color: bisque;
 }
 .dropdown{
-    display:none;
+    position:absolute;
+    top: -0.5px;
+    display: none;
+    list-style: none;
+    padding: 10px;
+    width:100px;
+    background-color: brown;
+    color: bisque;
+    border-radius: 3px;
+}
+.dropdown li{
+    padding: 10px;;
+}
+#skill{
+    position: relative;
+}
+#skill:hover .dropdown{
+    display:block;
+}
+.dropdown li:hover{
+    background-color: tomato;
 }
