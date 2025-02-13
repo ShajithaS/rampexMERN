@@ -1,0 +1,156 @@
+.transitions {
+  color: teal;
+  background-color: bisque;
+  transition: height 5s, width 5s, color 5s, background-color 1s, transform 2s;
+}
+.transitions:hover {
+  background-color: teal;
+  color: bisque;
+  padding: 30px;
+  height: 100px;
+  width: 300px;
+  transform: rotate(360deg);
+}
+.animation {
+  animation-name: animationDiv;
+  background-color: bisque;
+  width: 100px;
+  height: 100px;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes animationDiv {
+  from {
+    background-color: bisque;
+  }
+  to {
+    background-color: aqua;
+  }
+}
+.animation1 {
+  animation-name: animationDiv1;
+  background-color: bisque;
+  width: 100px;
+  height: 100px;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes animationDiv1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.animation2 {
+  animation-name: animationDiv2;
+  background-color: bisque;
+  width: 100px;
+  height: 100px;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+@keyframes animationDiv2 {
+  0% {
+    background-color: bisque;
+    top: 0;
+    left:0;
+  }
+  25% {
+    background-color: aqua;
+    top:0;
+    left:100px;
+  }
+  50% {
+    background-color: red;
+    top:100px;
+    left:100px;
+  }
+  75% {
+    background-color: yellow;
+    top:100px;
+    left:0px;
+  }
+  100% {
+    background-color: green;
+    top:0px;
+    left:0px;
+  }
+}
+.animation3 {
+  animation-name: animationDiv3;
+  background-color: bisque;
+  width: 100px;
+  height: 100px;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  position: fixed;
+}
+@keyframes animationDiv3 {
+  0% {
+    background-color: bisque;
+    top: 0;
+    left:0;
+  }
+  25% {
+    background-color: aqua;
+    top:0;
+    left:100px;
+  }
+  50% {
+    background-color: red;
+    top:100px;
+    left:100px;
+  }
+  75% {
+    background-color: yellow;
+    top:100px;
+    left:0px;
+  }
+  100% {
+    background-color: green;
+    top:0px;
+    left:0px;
+  }
+}
+.animation4 {
+  animation-name: animationDiv4;
+  background-color: bisque;
+  width: 100px;
+  height: 100px;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  position: static;
+}
+@keyframes animationDiv4 {
+  0% {
+    background-color: bisque;
+    top: 0;
+    left:0;
+  }
+  25% {
+    background-color: aqua;
+    top:0;
+    left:100px;
+  }
+  50% {
+    background-color: red;
+    top:100px;
+    left:100px;
+  }
+  75% {
+    background-color: yellow;
+    top:100px;
+    left:0px;
+  }
+  100% {
+    background-color: green;
+    top:0px;
+    left:0px;
+  }
+}
