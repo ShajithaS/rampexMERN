@@ -82,3 +82,61 @@ console.log(false || 10) //op:10
 console.log(false || true) //op:true
 console.log(true || false) //op:true
 
+x='5'
+y=5
+console.log("This is == operator",x==y)//checks only content
+console.log("This is === operator",x===y)//check both content and datatype
+
+//looping statements
+//for in loop
+//prints key in case of objects, prints index in case of array
+forarray=[10,20,30,"abc",true,"hello",[1,2,3]]
+for(i in forarray){
+    console.log(i)
+}
+//for of loop
+for(i of forarray){
+    console.log(i)
+}
+
+object1={
+    "firstname":"St.Joseph's",
+    "lastname":"Institute of Technology",
+    "dept":["CSE","IT","ADS","ECE"],
+    training:"MERN"
+}
+for(i in object1){
+    console.log(i)
+}
+/*
+for(i of object1){
+    console.log(i)
+}
+*/
+for({key,value} of Object.entries(object1)){
+    console.log(key,value)
+}
+/*for((key,value) of Object.entries(object1)){
+    console.log(key,value)
+}*/
+for([key,value] of Object.entries(object1)){
+    console.log(key,value)
+}
+forarray.forEach((ele) =>{
+    console.log(ele)
+})
+
+Object.keys(object1).forEach((ele) =>{
+    console.log(ele)
+})
+
+Object.values(object1).forEach((ele) =>{
+    console.log(ele)
+})
+
+Object.entries(object1).forEach((key,value) =>{
+    console.log(key,value)
+})
+Object.entries(object1).forEach((key) =>{
+    console.log(key)
+})
