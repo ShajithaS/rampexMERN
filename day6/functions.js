@@ -12,6 +12,7 @@ function hasParameterNoReturn(name){
     console.log(`Hello, ${name} !`);
 }
 //use backticks ` dont use " " or '' while using string interpolation
+//${} only works inside backticks(`)
 hasParameterNoReturn("Shajitha");
 
 function hasParameterhasReturn(name){
