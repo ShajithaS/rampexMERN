@@ -9,6 +9,7 @@ import Skills from "./components/FunctionalComponent/Skills";
 import Contact from "./components/FunctionalComponent/Contact";
 //import ClassComponentEg from "./components/ClassComponent/ClassComponentEG";
 import Navbar from "./components/FunctionalComponent/Navbar";
+import UseEffect from "./components/FunctionalComponent/Hooks/UseEffect";
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 function App() {
@@ -21,10 +22,12 @@ function App() {
     <Navbar />
       <Routes>
         <Route path='/' element={<Home properties="Hello" sjit="SJIT"></Home>}> </Route>
-        <Route path='/contact' element={<Contact></Contact>}> </Route>
         <Route path='/about' element={<About></About>}> </Route>
+        <Route path='/skills' element={<Skills></Skills>}> </Route>
+        <Route path='/contact' element={<Contact></Contact>}> </Route>
+        <Route path='/useeffect' element={<UseEffect></UseEffect>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}> </Route>
-
+        
       </Routes>
     </BrowserRouter>
       </main>
