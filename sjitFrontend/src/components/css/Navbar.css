@@ -1,0 +1,8 @@
+nav{
+    display:flex;
+    list-style-type:none;
+    background-color:chocolate;
+    color:bisque;
+    justify-content: space-around;
+    padding: 10px;
+}

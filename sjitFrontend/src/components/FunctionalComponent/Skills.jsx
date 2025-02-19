@@ -1,7 +1,13 @@
 function Skills() {
+    var styling={
+        textAlign:"center",
+        backgroundColor:"blue",
+        color:"white",
+    }
     return (
+        
         <div>
-            <h2>Skills</h2>
+            <h2 style={styling}>Skills</h2>
             <ul>
                 <li>HTML,CSS,JS</li>
                 <li>Git,Github</li>
