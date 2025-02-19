@@ -1,7 +1,8 @@
 import "../css/Navbar.css";
 import { Link } from "react-router-dom";
-
+import { useState } from "react";
 const Navbar = () => {
+  const [showDropdown, setShowDropdown] = useState(false);
   return (
     <header>
       <nav style={{ listStyleType: "none" }}>
@@ -17,13 +18,17 @@ const Navbar = () => {
         <li>
           <Link to='/contact'>Contact</Link>
         </li>
-        <span>hooks</span>
+        <li>hooks
         <ol>
           <li><Link to='/useeffect'>useEffect</Link></li>
           <li><Link to=''></Link>useState</li>
         </ol>
+        </li>
         <li>
           <Link to='/signup'>SignUp</Link>
+        </li>
+        <li>
+          <Link to='/login'>Login</Link>
         </li>
       </nav>
     </header>

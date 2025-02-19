@@ -7,6 +7,7 @@ import SignUp from "./components/FunctionalComponent/SignUp";
 import About from "./components/FunctionalComponent/About";
 import Skills from "./components/FunctionalComponent/Skills";
 import Contact from "./components/FunctionalComponent/Contact";
+import Login from "./components/FunctionalComponent/Login";
 //import ClassComponentEg from "./components/ClassComponent/ClassComponentEG";
 import Navbar from "./components/FunctionalComponent/Navbar";
 import UseEffect from "./components/FunctionalComponent/Hooks/UseEffect";
@@ -27,7 +28,7 @@ function App() {
         <Route path='/contact' element={<Contact></Contact>}> </Route>
         <Route path='/useeffect' element={<UseEffect></UseEffect>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}> </Route>
-        
+        <Route path='/login' element={<Login></Login>}> </Route>
       </Routes>
     </BrowserRouter>
       </main>
