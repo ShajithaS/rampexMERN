@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function SignUp() {
     var styling={
         textAlign:"center",
@@ -20,6 +21,7 @@ function SignUp() {
                 <br />
                 <button type="submit">Sign in</button>
             </form>
+            <p>Already have an account?<Link to='/login'>Login</Link></p>
         </div>
     );
 }

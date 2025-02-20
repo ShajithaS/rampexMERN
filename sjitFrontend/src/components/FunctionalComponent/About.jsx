@@ -22,7 +22,7 @@ function About(){
             <h3>Updating state variable:{num}</h3>
             <button onClick={()=>setNum(num+1)}>+</button>
             <h3>Click here to reset</h3>
-            <button onClick={()=>setNum(0)}>Reset</button>
+            <button onDoubleClick={()=>setNum(0)}>Reset</button>
         </div>
     );
 }

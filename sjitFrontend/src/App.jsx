@@ -11,7 +11,10 @@ import Login from "./components/FunctionalComponent/Login";
 //import ClassComponentEg from "./components/ClassComponent/ClassComponentEG";
 import Navbar from "./components/FunctionalComponent/Navbar";
 import UseEffect from "./components/FunctionalComponent/Hooks/UseEffect";
+import UseEffectAPI from "./components/FunctionalComponent/Hooks/UseEffectAPI"
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import UseRef from "./components/FunctionalComponent/Hooks/UseRef";
+import UseMemo from "./components/FunctionalComponent/Hooks/UseMemo";
 
 function App() {
   /*const [count, setCount] = useState(0)*/
@@ -29,6 +32,9 @@ function App() {
         <Route path='/useeffect' element={<UseEffect></UseEffect>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}> </Route>
         <Route path='/login' element={<Login></Login>}> </Route>
+        <Route path='/useeffectapi' element={<UseEffectAPI></UseEffectAPI>}> </Route>
+        <Route path='/useref' element={<UseRef></UseRef>}> </Route>
+        <Route path='/usememo' element={<UseMemo></UseMemo>}> </Route>
       </Routes>
     </BrowserRouter>
       </main>

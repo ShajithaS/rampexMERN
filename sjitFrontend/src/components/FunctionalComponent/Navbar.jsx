@@ -6,26 +6,26 @@ const Navbar = () => {
   return (
     <header>
       <nav style={{ listStyleType: "none" }}>
-        <li>
+        <li className="link">
           <Link to='/'>Home</Link>
         </li>
-        <li>
+        <li className="link">
           <Link to='/about'>About</Link>
         </li>
-        <li>
+        <li className="link">
           <Link to='/skills'>Skills</Link>
         </li>
-        <li>
+        <li className="link">
           <Link to='/contact'>Contact</Link>
         </li>
-        <li>hooks
-        <ol>
+        <li className="link">hooks 
+        <ol className="dropdown-list">
           <li><Link to='/useeffect'>useEffect</Link></li>
-          <li><Link to=''></Link>useState</li>
+          <li><Link to='/about'>useState</Link></li>
+          <li><Link to='/useeffectapi'>useEffectAPI</Link></li>
+          <li><Link to='/useref'>useRef</Link></li>
+          <li><Link to='/usememo'>useMemo</Link></li>
         </ol>
-        </li>
-        <li>
-          <Link to='/signup'>SignUp</Link>
         </li>
         <li>
           <Link to='/login'>Login</Link>
