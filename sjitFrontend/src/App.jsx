@@ -19,6 +19,7 @@ import UseCallback from "./components/FunctionalComponent/Hooks/UseCallback";
 import UseMemoize from "./components/FunctionalComponent/UseMemoize";
 import HoC from "./components/FunctionalComponent/HoC/HoC";
 import Memo from "./components/FunctionalComponent/Memo/Memo";
+import LazyLoadingAndSuspense from "./components/FunctionalComponent/Memo/LazyLoadingAndSuspense";
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
         <Route path='/usememoize' element={<UseMemoize/>}> </Route>
         <Route path='/hoc' element={<HoC/>}> </Route>
         <Route path='/memo' element={<Memo/>}> </Route>
+        <Route path='/lazy' element={<LazyLoadingAndSuspense/>}></Route>
         
       </Routes>
     </BrowserRouter>
