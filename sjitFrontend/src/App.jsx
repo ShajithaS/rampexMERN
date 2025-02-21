@@ -15,6 +15,11 @@ import UseEffectAPI from "./components/FunctionalComponent/Hooks/UseEffectAPI"
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import UseRef from "./components/FunctionalComponent/Hooks/UseRef";
 import UseMemo from "./components/FunctionalComponent/Hooks/UseMemo";
+import UseCallback from "./components/FunctionalComponent/Hooks/UseCallback";
+import UseMemoize from "./components/FunctionalComponent/UseMemoize";
+import HoC from "./components/FunctionalComponent/HoC/HoC";
+import Memo from "./components/FunctionalComponent/Memo/Memo";
+
 
 function App() {
   /*const [count, setCount] = useState(0)*/
@@ -35,11 +40,17 @@ function App() {
         <Route path='/useeffectapi' element={<UseEffectAPI></UseEffectAPI>}> </Route>
         <Route path='/useref' element={<UseRef></UseRef>}> </Route>
         <Route path='/usememo' element={<UseMemo></UseMemo>}> </Route>
+        <Route path='/usecallback' element={<UseCallback></UseCallback>}> </Route>
+        <Route path='/usememoize' element={<UseMemoize/>}> </Route>
+        <Route path='/hoc' element={<HoC/>}> </Route>
+        <Route path='/memo' element={<Memo/>}> </Route>
+        
       </Routes>
     </BrowserRouter>
       </main>
       </>
   );
 }
+
 
 export default App;
