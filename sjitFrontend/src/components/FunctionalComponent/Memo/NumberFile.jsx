@@ -9,7 +9,7 @@ const NumberFile = () => {
         value={number}
         onChange={(e) => setNumber(e.target.value)}
       />
-      <p>this is number:{number}</p>
+      <h3>The number is:{number}</h3>
     </div>
   )
 }

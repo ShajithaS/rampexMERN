@@ -4,7 +4,7 @@ import TextFile from "./TextFile"
 const Memo = () => {
   return (
     <div>
-    <h1>this is memo component</h1>
+    <h1>This is memo component</h1>
     <NumberFile />
     <TextFile />
     </div>

@@ -9,7 +9,7 @@ const TextFile = () => {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <h2>The text is : {text}</h2>
+      <h3>The text is : {text}</h3>
     </div>
   )
 }

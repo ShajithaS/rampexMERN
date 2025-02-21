@@ -6,3 +6,38 @@ nav{
     justify-content: space-around;
     padding: 10px;
 }
+.link {
+  text-decoration: none;
+  color: aliceblue;
+  padding: 3px;
+}
+.link:hover {
+  background-color: aliceblue;
+  color: chocolate;
+  border-radius: 10px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-list {
+  display: block;
+  position: absolute;
+  background-color: bisque;
+  padding: 5px;
+  list-style-type: none;
+  border-radius: 3px;
+  top: 6px;
+}
+.dropdown-link {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  display: block;
+  border-radius: 3px;
+}
+
+.dropdown-link:hover {
+  background-color: brown;
+  color: white;
+}
