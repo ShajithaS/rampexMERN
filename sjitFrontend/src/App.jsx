@@ -20,7 +20,7 @@ import UseMemoize from "./components/FunctionalComponent/UseMemoize";
 import HoC from "./components/FunctionalComponent/HoC/HoC";
 import Memo from "./components/FunctionalComponent/Memo/Memo";
 import LazyLoadingAndSuspense from "./components/FunctionalComponent/Memo/LazyLoadingAndSuspense";
-
+import COE from "./components/FunctionalComponent/ContextAPI/COE";
 
 function App() {
   /*const [count, setCount] = useState(0)*/
@@ -46,6 +46,7 @@ function App() {
         <Route path='/hoc' element={<HoC/>}> </Route>
         <Route path='/memo' element={<Memo/>}> </Route>
         <Route path='/lazy' element={<LazyLoadingAndSuspense/>}></Route>
+        <Route path='/res' element={<COE />}> </Route>
         
       </Routes>
     </BrowserRouter>
