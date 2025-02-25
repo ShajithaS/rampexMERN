@@ -7,4 +7,4 @@ const Faculty = () => {
     </div>
   )
 };
-export default Faculty;
+export default Faculty
