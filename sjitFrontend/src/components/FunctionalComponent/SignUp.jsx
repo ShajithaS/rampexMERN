@@ -10,16 +10,16 @@ function SignUp() {
   const navigate=useNavigate()
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
-  const [mail, setMail] = useState("");
-  const [phoneNo, setPhoneno] = useState(0);
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState(0);
   const [password, setPassword] = useState("");
   const handleSignup = async(event) => {
     event.preventDefault()
     const req=await axios.post("https://backend-38dh.onrender.com/signup", {
       firstname: firstname,
       lastname: lastname,
-      email: mail,
-      phoneNumber: phoneNo,
+      email: email,
+      phoneNumber: phoneNumber,
       password: password
     });
     const message=req.data.message;
@@ -62,8 +62,8 @@ function SignUp() {
           id="email"
           placeholder="Email"
           required
-          value={mail}
-          onChange={(e) => setMail(e.target.value)}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <br />
         <label htmlFor="phoneno">Phone Number:</label>
@@ -72,8 +72,8 @@ function SignUp() {
           id="phoneNumber"
           placeholder="Phone no"
           required
-          value={phoneNo}
-          onChange={(e) => setPhoneno(e.target.value)}
+          value={phoneNumber}
+          onChange={(e) => setPhoneNumber(e.target.value)}
         />
         <br />
         <label htmlFor="password">Password:</label>
