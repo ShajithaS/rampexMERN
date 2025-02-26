@@ -18,8 +18,8 @@ function SignUp() {
     const req=await axios.post("https://backend-38dh.onrender.com/signup", {
       firstname: firstname,
       lastname: lastname,
-      mail: mail,
-      phoneNo: phoneNo,
+      email: email,
+      phoneNumber: phoneNumber,
       password: password
     });
     const message=req.data.message;
