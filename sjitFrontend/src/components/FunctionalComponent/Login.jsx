@@ -9,9 +9,9 @@ function Login() {
         <div>
             <h2 style={styling}>Login</h2>
             <form >
-                <input type="email" name="email" placeholder="Email" required />
+                <input type="email" name="email" id="email"placeholder="Email" required />
                 <br />
-                <input type="password" name="password" placeholder="Password" required />
+                <input type="password" name="password"id="password" placeholder="Password" required />
                 <br />
                 <button type="submit">Login</button>
             </form>
