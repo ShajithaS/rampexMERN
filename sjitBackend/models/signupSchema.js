@@ -1,4 +1,6 @@
+//mongodb connection
 const mdb=require("mongoose")
+
 //creating blueprint
 const signupSchema=mdb.Schema({
 firstname:String,
@@ -7,6 +9,7 @@ email:String,
 password:String,
 phoneNumber:Number
 })
+
 //build model using blueprint
 const signup_schema=mdb.model("signup",signupSchema)
 module.exports=signup_schema
