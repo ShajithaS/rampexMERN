@@ -7,9 +7,9 @@ const Signup = require("./models/signupSchema");
 const app = express(); /* responsible for creating server */
 app.use(express.json());
 const PORT = 3001;
-const cors =require('cors');
-app.use(cors())
-
+const cors = require("cors");
+app.use(cors());
+const jwt = require("jsonwebtoken");
 console.log(process.env.MONGODB_URL);
 
 mdb
@@ -51,30 +51,55 @@ app.post("/signup", async (req, res) => {
     res.status(400).json({ message: "Signup unsuccesful", isSignup: false });
   }
 });
+//verification token
+const verifyTok=(req,res,next)=>{
+  console.log("Middleware check")
+  const token=req.headers.authorization
+  console.log(token)
+  if(!token){
+    res.json("request denied")
+  }
+  next()
+}
 
-app.get('/getsignupdet',async(req,res)=>{
-const signup=await Signup.find()
-console.log(signup)
-res.send("signup details fetched")
-})
+app.get("/getsignupdet",verifyTok, async (req, res) => {
+  const signup = await Signup.find();
+  console.log(signup);
+  res.send("signup details fetched");
+});
 
-app.post("/login", async(req, res) => {
+//Middleware
+jwt.verify()
+
+app.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
-    const existingUser = await Signup.findOne({email:email})
-    console.log(existingUser)
-    if(existingUser){
-        const isValidPassword = await bcrypt.compare(password,existingUser.password)
-        console.log(isValidPassword)
-        if(isValidPassword){
-            res.status(201).json({message:"Login successful",isLogin:true})
-        }
-        else{
-          res.status(201).json({message:"incorrect password",isLogin:false})
-        }
-    }
-    else{
-      res.send(400).json({message:"User not found, Sign up first",isLogin:false})
+    const existingUser = await Signup.findOne({ email: email });
+    console.log(existingUser);
+    if (existingUser) {
+      const payload = {
+        firstname: existingUser.firstname,
+        email: existingUser.email,
+      };
+      const isValidPassword = await bcrypt.compare(
+        password,
+        existingUser.password
+      );
+      console.log(isValidPassword);
+      if (isValidPassword) {
+        const token = jwt.sign(payload, process.env.SECRET_KEY, {
+        expiresIn: "10m",
+      });
+        res
+          .status(201)
+          .json({ message: "Login successful", isLogin: true, token: token });
+      } else {
+        res.status(201).json({ message: "incorrect password", isLogin: false });
+      }
+    } else {
+      res
+        .send(400)
+        .json({ message: "User not found, Sign up first", isLogin: false });
     }
   } catch (error) {
     console.log(error);
