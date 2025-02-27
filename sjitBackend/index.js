@@ -59,7 +59,17 @@ const verifyTok=(req,res,next)=>{
   if(!token){
     res.json("request denied")
   }
-  next()
+  try {
+    console.log(token)
+    const payload = console.log(jwt.verify(token,process.env.SECRET_KEY))  
+    console.log(payload.firstname)
+    firstname=payload.firstname
+    next()
+  } catch (error) {
+    console.log(err)
+    res.send("Either token is expired or token is wrong")
+  }
+
 }
 
 app.get("/getsignupdet",verifyTok, async (req, res) => {
@@ -69,7 +79,7 @@ app.get("/getsignupdet",verifyTok, async (req, res) => {
 });
 
 //Middleware
-jwt.verify()
+//jwt.verify()
 
 app.post("/login", async (req, res) => {
   try {
